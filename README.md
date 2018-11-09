@@ -9,4 +9,6 @@ $ ./Tutorial 16
 ```
 
 Run tests:
+```
 $ ctest
+```

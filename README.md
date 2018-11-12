@@ -3,7 +3,8 @@ Files tutorial to learn cmake
 
 Compile and run:
 ```
-$ cmake ./
+$ cmake .
+$ make
 $ ./Tutorial
 $ ./Tutorial 16
 ```

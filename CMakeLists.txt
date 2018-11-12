@@ -5,6 +5,11 @@ project (Tutorial)
 set (Tutorial_VERSION_MAJOR 1)
 set (Tutorial_VERSION_MINOR 2)
 
+# does this system provide the log and exp functions?
+include (CheckFunctionExists)
+check_function_exists (log HAVE_LOG)
+check_function_exists (exp HAVE_EXP)
+
 # should we use our own math functions
 option(USE_MYMATH "Use tutorial provided math implementation" ON)
 
@@ -31,6 +36,11 @@ target_link_libraries (Tutorial ${EXTRA_LIBS})
 install (TARGETS Tutorial DESTINATION bin)
 install (FILES "${PROJECT_BINARY_DIR}/TutorialConfig.h"        
          DESTINATION include)
+
+# enable dashboard scripting
+include (CTest)
+set (CTEST_PROJECT_NAME "Tutorial")
+
 
 # enable testing
 enable_testing ()

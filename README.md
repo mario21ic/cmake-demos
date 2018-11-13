@@ -13,3 +13,9 @@ Run tests:
 ```
 $ ctest
 ```
+
+Installer:
+```
+$ cpack --config CPackConfig.cmake
+$ cpack --config CPackSourceConfig.cmake
+```

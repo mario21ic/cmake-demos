@@ -4,6 +4,9 @@ project (Tutorial)
 # enable dashboard scripting
 include (CTest)
 
+# Modules standart
+include(FeatureSummary)
+
 # The version number.
 set (Tutorial_VERSION_MAJOR 1)
 set (Tutorial_VERSION_MINOR 2)

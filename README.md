@@ -1,21 +1,24 @@
 # cmake-demo
 Files tutorial to learn cmake https://cmake.org/cmake-tutorial/
 
-Compile and run:
+Compile and Test:
 ```
-$ cmake .
-$ make
-$ ./Tutorial
-$ ./Tutorial 16
+$ ./build.sh
 ```
 
-Run tests:
+Run:
 ```
-$ ctest
+$ ./build/Tutorial
+$ ./build/Tutorial 16
 ```
 
-Installer:
+Tests:
 ```
-$ cpack --config CPackConfig.cmake
-$ cpack --config CPackSourceConfig.cmake
+$ cd build/ && ctest
+```
+
+Installers:
+```
+$ cd build/ && cpack --config CPackConfig.cmake
+$ cd build/ && cpack --config CPackSourceConfig.cmake
 ```
